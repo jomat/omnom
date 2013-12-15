@@ -89,6 +89,7 @@
 
     <div>
        <span class="datetime">{{item.created|date:"d/m/Y h:m:s"}}</span>
+       <span class="username"><a href="{%root_url%}/u/{{item.user}}/">{{item.user}}</a></span>
        {% if item.rel %}
          <span class="hoverhide">
          <small>Related Bookmarks</small>

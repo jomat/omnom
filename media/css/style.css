@@ -87,6 +87,12 @@ ul.tags { margin: 0px; padding:5px 0 5px 65px;}
 }
 
 
+.username {
+	font-size:		8pt;
+	color:			#4c846e;
+}
+
+
 .dialog {
         display: none;
         position: fixed;

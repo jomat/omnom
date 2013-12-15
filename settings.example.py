@@ -2,7 +2,7 @@
 
 import os
 BASE_PATH = os.path.dirname(__file__)
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 DEV_SERVER = True
@@ -56,7 +56,7 @@ USE_L10N = True
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = BASE_PATH+'/media/'
 
-ROOT_URL = ''
+ROOT_URL = 'https://omnom.example.com'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -72,7 +72,7 @@ else:
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '8fhxx+q$9kgl8%%dex*h*85yhs0_fm6cl=j8_0eftux*21mrrx'
+SECRET_KEY = 'zOSeVApVb1mXnWpePyeHDgZLUuMBYqtgRXvLcjwSQBowmAL8x8zOBKTFXkQRoplf0K0J7zC'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -125,6 +125,9 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
                                "django.core.context_processors.static",
                                'django.core.context_processors.request',
                                "django.contrib.messages.context_processors.messages")
+
+DEFAULT_FROM_EMAIL = 'noreply@example.com'
+
 try:
     from local_settings import *
 except:

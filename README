@@ -12,6 +12,18 @@ beautifulsoup
 
 ...
 
+== Installation hints ==
+
+- initialize your database: python manage.py syncdb
+- ensure your smtpd on localhost can deliver registration mails
+- setup your sites name and domain:
+    python manage.py dbshell
+    or:
+    sqlite3 bookmarks.db
+    sqlite> update django_site set domain='omnom.example.com', name='Some omnom site' where id = 1;
+- create directory for snapshots: mkdir snapshots
+- provide tinymce js. i. e.: ln -s /usr/share/tinymce/www/ media/js/tinymce
+
 
 == Federation thoughts ==
 

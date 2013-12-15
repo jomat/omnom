@@ -8,7 +8,7 @@ from tags import views as tags
 
 urlpatterns = patterns('',
     (r'^accounts/logout$', 'django.contrib.auth.views.logout', {'next_page' : '/'}),
-    (r'^accounts/', include('registration.urls')),
+    (r'^accounts/', include('registration.backends.default.urls')),
     (r'^tagr\.user\.js', tags.gmscript),
     (r'^tags/', tags.tags),
     (r'^add/', tags.add),
